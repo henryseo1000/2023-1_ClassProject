@@ -1,0 +1,10 @@
+package 과제5;
+
+public class Year_num {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,19 @@
+package 도전과제4;
+import java.util.Scanner;
+
+public class Rome {
+
+	public static void main(String[] args) {
+		int year;
+		int num = 1000;
+		Scanner sc = new Scanner(System.in);
+		
+		year = sc.nextInt();
+		
+		while (year != 0 && num != 0) {
+			System.out.print(year / num);
+			num  = num / 2;
+		}
+	}
+
+}

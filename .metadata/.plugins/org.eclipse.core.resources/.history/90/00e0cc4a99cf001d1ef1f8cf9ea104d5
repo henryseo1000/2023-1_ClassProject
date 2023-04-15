@@ -1,0 +1,48 @@
+package 도전과제4;
+import java.util.Scanner;
+
+public class Rome {
+
+	public static void main(String[] args) {
+		int year;
+		int num = 1000;
+		String symbol = "";
+		Scanner sc = new Scanner(System.in);
+		
+		year = sc.nextInt();
+		
+		while (year != 0 && num != 0) {
+			
+			System.out.println(year);
+			
+			if(num == 1000) {
+				symbol = "M";
+			}
+			if(num == 500) {
+				symbol = "D";
+			}
+			if(num == 100) {
+				symbol = "C";
+			}
+			if(num == 50) {
+				symbol = "L";
+			}
+			if(num == 10) {
+				symbol = "X";
+			}
+			if(num == 5) {
+				symbol = "V";
+			}
+			else{
+				symbol = "I";
+			}
+			
+			for(int i = 0; i < year / num; i++) {
+				System.out.print(symbol);
+			}
+			year = year % num;
+			num = num / 2;
+		}
+	}
+
+}

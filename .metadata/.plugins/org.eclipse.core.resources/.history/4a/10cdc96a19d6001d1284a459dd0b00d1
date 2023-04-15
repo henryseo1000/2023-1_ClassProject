@@ -1,0 +1,53 @@
+package 과제5;
+
+import java.util.Scanner;
+
+public class Year_num {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String num = "";
+		int length_1 = 0, length_2 = 0;
+		Scanner sc = new Scanner(System.in);
+		
+		num = sc.next(); 
+		System.out.println(num.charAt(0));
+		/*while(num.length() < 10) {
+			System.out.print("암호를 입력하세요: ");
+			num = sc.next(); 
+			System.out.println("입력된 암호: " + num);
+		}*/
+	
+	}
+	
+	public static int repeat(String num) {
+		int count = 0;
+		
+		for (int i = 0; i < num.length(); i++) {
+			if( '0' <= num.charAt(i) && num.charAt(i) <= '9') {
+				count++;
+			}
+		}
+		
+		return count;
+	}
+	
+	public static int recursive(String num) {
+		int count = 0;
+		
+		if ('a' <= num.charAt(0) && num.charAt(0) <= 'z' && 'A' <= num.charAt(0) && num.charAt(0) <= 'Z') {
+			count ++;
+		}
+		else {
+			
+		}
+		
+		if (num.length() == 1) {
+			return count;
+		}
+		else {
+			return count + recursive(num.substring(0));
+		}
+	}
+
+}

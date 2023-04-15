@@ -1,0 +1,59 @@
+package 예제4;
+
+import java.util.Scanner;
+import java.util.Random;
+
+public class example4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Random random = new Random(); // 랜덤 객체
+		Scanner sc = new Scanner(System.in); // 입력 받기 위한 객체
+		int answer, guess, num; // 정답, 추측, 횟수
+		String yesno = "";
+		
+		// 추측과 횟수는 0으로 초기화, 정답은 1 ~100까지의 정수
+		guess = 0;
+		num = 0;
+		answer = random.nextInt(100) + 1;
+		
+		while (true) {
+			System.out.print("추측한 숫자를 입력하세요(종료를 원하면 -99):");
+			guess = sc.nextInt();
+			if (guess == answer) {
+				System.out.println("추측한 숫자가 맞다");
+				System.out.println("추측한 횟수: " + num);
+				System.out.print("계속하기를 원하는가?(예 혹은 아니오):");
+				yesno = sc.next();
+				if (yesno.equals("예")) {
+					num = 0; // 횟수 초기화
+					continue;
+				}
+				else {
+					break;
+				}
+			}
+			else if(guess == -99) {
+				System.out.println("추측한 횟수: " + num);
+				System.out.print("계속하기를 원하는가?(예 혹은 아니오):");
+				yesno = sc.next();
+				if (yesno.equals("예")) {
+					num = 0; // 횟수 초기화
+					continue;
+				}
+				else {
+					break;
+				}
+			}
+			else if (guess > answer){
+				System.out.println("추측한 숫자가 크다");
+				num ++;
+			}
+			else {
+				System.out.println("추측한 숫자가 작다");
+				num ++;
+			}
+		}
+	}
+
+}
