@@ -4,6 +4,8 @@ public class Student {
     int grade = 0; // 신청 학점수
     int max_grade = 0; // 최대 신청 학점수
 
+    // 객체를 생성할 때 학번, 이름, 최대 신청 학점수를 받아 초기화한다.
+    // 이때 신청 학점수는 처음에 0이다.
     Student(int id_, String name_, int max_){
         stu_id = id_;
         name = name_;

@@ -60,12 +60,12 @@ public class Course {
         return name + "\t\t" + limit + "\t\t\t" + num_student;
     }
 
-    // 최대 수강인원수를 주어진 값만큼 증가시킨다.
+    // 수강 인원수를 주어진 값만큼 증가시킨다.
     public void inc(int num){
         num_student += num;
     }
 
-    // 수강 인원수를 주어진 값만큼 증가시킨다.
+    // 최대 수강 인원수를 주어진 값만큼 증가시킨다.
     public void incLimit(int num){
         limit += num;
     }
