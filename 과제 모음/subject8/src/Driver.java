@@ -10,6 +10,8 @@ public class Driver {
         registerCourses(slist);
         printResult(slist);
     }
+
+    //교수의 이름, 소속 학과명과 교과목명을 입력받는다. 강의할 교수가 없을때까지 계속한다.
     public static void inputProInfo(Professor[] p){
         Scanner sc = new Scanner(System.in);
         boolean add = true;
@@ -37,6 +39,8 @@ public class Driver {
         }
         System.out.println();
     }
+
+    //교수들의 강의 과목들을 수강하는 학생의 이름과 학번을 입력받고, 수강할 학생이 없을 때까지 계속한다.
     public static void inputStudInfo(Student[] s){
         Scanner sc = new Scanner(System.in);
         boolean add = true;
@@ -62,15 +66,18 @@ public class Driver {
         }
         System.out.println();
     }
+
+    //각 학생마다 수강 신청할 교과목명을 입력받는다. 이는 추가할 교과목이 없을떄까지 계속한다.
     public static void registerCourses(Student[] s){
         Scanner sc = new Scanner(System.in);
         String answer = "";
+        String subject = "";
 
         for(int i = 0; i < s.length; i++){
             if(s[i] != null) {
                 while (true) {
                     System.out.print(s[i].name + "이 수강 신청할 교과목명을 입력하세요: ");
-                    String subject = sc.next();
+                    subject = sc.next();
                     s[i].add_subject(subject);
 
                     System.out.print("추가할 교과목이 더 있나요?(Yes or No): ");
@@ -85,6 +92,8 @@ public class Driver {
 
         System.out.println();
     }
+
+    //각 학생이 수강신청한 과목들을 이름과 학번을 같이 출력한다.
     public static void printResult(Student[] s){
         System.out.println("이름\t\t학번\t\t수강과목들");
         for(int i = 0; i < s.length; i++){
