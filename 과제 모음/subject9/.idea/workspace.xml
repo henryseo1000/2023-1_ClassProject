@@ -5,12 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ea5a7101-c9ea-400a-8a8e-cf583298d40e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BasicPayCalculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DangerPayCalculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/OverPayCalculator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Driver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BasicPayCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BasicPayCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DangerPayCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DangerPayCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Driver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OverPayCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OverPayCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../도전과제 모음/challenge9/src/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../도전과제 모음/challenge9/src/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../도전과제 모음/challenge9/src/Elective.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../도전과제 모음/challenge9/src/Elective.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../도전과제 모음/challenge9/src/GenEdu.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../도전과제 모음/challenge9/src/GenEdu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../도전과제 모음/challenge9/src/Major.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../도전과제 모음/challenge9/src/Major.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,15 +38,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
