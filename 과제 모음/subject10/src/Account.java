@@ -4,6 +4,7 @@ public abstract class Account {  //예적금 통장
     int period; //계약 기관
     double interest_rate; //연이율
 
+    // 객체 생성
     Account(String n, int num, int p, double i){
         name = n;
         Account_num = num;
@@ -11,9 +12,10 @@ public abstract class Account {  //예적금 통장
         interest_rate = i;
     }
 
-    public int Calculate(){
-        return 0;
-    }
+    // 예적금 유형이 결정되기 전에는 이자 계산 불가(추상 클래스)
+    public abstract int Calculate();
+
+    // 통장 정보 출력
     public String printAll(){
         return "예금주 이름: " + name + "\n계좌번호: " + Account_num + "\n계약기간: " + period + "\n연이율: " + interest_rate;
     }

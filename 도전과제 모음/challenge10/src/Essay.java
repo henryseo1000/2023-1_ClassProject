@@ -9,6 +9,11 @@ public class Essay extends TestQuestion{
         problem = sc.nextLine();
     }
     public String toString(){
-        return problem;
+        String print = "";
+        print += problem + "\n";
+        for(int i = 0; i < answer_line; i++){
+            print += "___________________________________________________\n";
+        }
+        return print;
     }
 }
