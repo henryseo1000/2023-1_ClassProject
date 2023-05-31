@@ -4,11 +4,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Random;
 
-public class GuessPanel extends JFrame { //이름은 panel이지만 사실은 frame
+import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
+
+public class GuessPanel{
     JButton button1, button2; //짝수와 홀수 버튼 2개
     JLabel label1, label2, label3; //맞고 틀림, 비밀번호를 알려주는 레이블 3개
     int num = 0; //랜덤 번호
-    Container contentPane; //컨테이너 객체
+    JPanel contentPane; //컨테이너 객체
     private class ButtonListener implements ActionListener{ //버튼에 달아줄 리스너 객체(내부 클래스)
         public void actionPerformed(ActionEvent event){ //ActionListener의 actionPerformed를 활용
             //버튼을 누르는 순간에는 버튼이 사라진다.
@@ -35,12 +37,12 @@ public class GuessPanel extends JFrame { //이름은 panel이지만 사실은 fr
     }
     public GuessPanel() {// 생성자 메소드
         Random ran = new Random();
-        contentPane = getContentPane();
-        setTitle("홀짝 맞추기 게임"); //프레임의 제목 설정
-        setSize(240, 100); //프레임의 크기 설정
+        contentPane = new JPanel();
+        //contentPane. //프레임의 제목 설정
+        //contentPane
         contentPane.setLayout(new FlowLayout()); //배치 관리자 설정
 
-        num = ran.nextInt(100 + 1); //랜덤한 정수 생성 (0 ~ 100까지)
+        num = ran.nextInt(100 + 1); //랜덤한 정수 생성 (0 ~ 101까지)
 
         //각 버튼과 레이블에 글자를 넣는다.
         button1 = new JButton("짝수");
@@ -57,7 +59,5 @@ public class GuessPanel extends JFrame { //이름은 panel이지만 사실은 fr
         //컴포넌트 생성 및 추가
         contentPane.add(button1);
         contentPane.add(button2);
-
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 }
