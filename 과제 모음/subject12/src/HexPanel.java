@@ -12,7 +12,7 @@ public class HexPanel extends JPanel {
             String str = textfield.getText();
             int num = Integer.parseInt(str);
 
-            label2.setText(Integer.toHexString(num));
+            label2.setText(toHex(num));
             label2.setVisible(true);
         }
     }
@@ -35,4 +35,36 @@ public class HexPanel extends JPanel {
         label2.setVisible(false);
     }
 
+    public String toHex(int num){
+        int left = 0;
+        String answer = "";
+
+        while(num != 0){
+            left = num % 16;
+            num = num / 16;
+
+            if(left == 10){
+                answer = "A" + answer;
+            }
+            else if(left == 11){
+                answer = "B" + answer;
+            }
+            else if(left == 12){
+                answer = "C" + answer;
+            }
+            else if(left == 13){
+                answer = "D" + answer;
+            }
+            else if(left == 14){
+                answer = "E" + answer;
+            }
+            else if(left == 15){
+                answer = "F" + answer;
+            }
+            else{
+                answer = left + answer;
+            }
+        }
+        return answer;
+    }
 }
