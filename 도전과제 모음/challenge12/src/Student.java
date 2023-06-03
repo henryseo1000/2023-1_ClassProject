@@ -1,5 +1,5 @@
 public class Student {
-    int id;
+    String id;
     String name;
     String sex;
     String p_num;
@@ -8,7 +8,7 @@ public class Student {
     String hobby;
     String intro;
 
-    public Student(int i, String n, String s, String p, String a, String m, String h, String in){
+    public Student(String i, String n, String s, String p, String a, String m, String h, String in){
         id = i;
         name = n;
         sex = s;

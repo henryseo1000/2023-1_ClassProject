@@ -1,5 +1,12 @@
+import javax.swing.*;
+
+import java.awt.*;
+
+import static javax.swing.JFrame.*;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        RegStudent r1 = new RegStudent();
     }
 }
+
