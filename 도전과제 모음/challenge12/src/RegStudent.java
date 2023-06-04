@@ -11,12 +11,11 @@ public class RegStudent extends JFrame {
     JButton b1, b2;
     JLabel l1, l2, l3, l4, l5, l6, l7, l8;
     JTextField tf1, tf2, tf3, tf4;
-    JRadioButton rb1, rb2;
     CheckboxGroup cg1, cg2;
     Checkbox c1, c2, c3, c4, c5, c6;
     Choice ch1;
     JTextArea ta1;
-    JPanel p1, p2, p3, p4, p5, p6, p7;
+    JPanel p1, p2, p3, p4, p5, p6, p7, p8;
 
     public RegStudent(){
         stu_num = 0;
@@ -24,8 +23,7 @@ public class RegStudent extends JFrame {
 
         GridBagConstraints g1 = new GridBagConstraints();
         ButtonListener bl = new ButtonListener();
-        ButtonGroup bg = new ButtonGroup();
-
+/*
         p1 = new JPanel(new GridLayout(1,5,10,10));
         p2 = new JPanel(new GridLayout(1,4,10,10));
         p3 = new JPanel(new GridLayout(1,2,10,10));
@@ -33,7 +31,16 @@ public class RegStudent extends JFrame {
         p5 = new JPanel(new GridLayout(1,5,10,10));
         p6 = new JPanel(new GridLayout(2,1,1,1));
         p7 = new JPanel();
+ */
 
+        p1 = new JPanel();
+        p2 = new JPanel();
+        p3 = new JPanel();
+        p4 = new JPanel();
+        p5 = new JPanel();
+        p6 = new JPanel();
+        p7 = new JPanel();
+        p8 = new JPanel();
 
         cg1 = new CheckboxGroup();
         cg2 = new CheckboxGroup();
@@ -59,9 +66,6 @@ public class RegStudent extends JFrame {
         c5 = new Checkbox("영화", false);
         c6 = new Checkbox("여행", false);
 
-        rb1 = new JRadioButton("남");
-        rb2 = new JRadioButton("여");
-
         ch1 = new Choice();
         ch1.add("학과 선택");
         ch1.add("컴퓨터공학과");
@@ -73,11 +77,8 @@ public class RegStudent extends JFrame {
 
         ta1 = new JTextArea();
 
-        bg.add(rb1);
-        bg.add(rb2);
-
         JScrollPane scrollPane = new JScrollPane();
-
+/*
         setLayout(new GridLayout(7,1));
         add(p1);
         add(p2, BorderLayout.AFTER_LAST_LINE);
@@ -86,43 +87,64 @@ public class RegStudent extends JFrame {
         add(p5, BorderLayout.AFTER_LAST_LINE);
         add(p6, BorderLayout.AFTER_LAST_LINE);
         add(p7, BorderLayout.AFTER_LAST_LINE);
+*/
+        setLayout(new GridLayout(2,1));
+        add(p1);
+        add(p2);
 
-        p1.add(l1); //성명
-        tf1.setColumns(3);
+        p1.setLayout(new GridLayout(5,1));
+        p1.add(p4);
+        p1.add(p5);
+        p1.add(p6);
+        p1.add(p7);
+        p1.add(p8);
 
-        p1.add(tf1);
+        p4.setLayout(new FlowLayout(FlowLayout.LEFT, 10, 10));
+        p4.add(l1); //성명
+        tf1.setColumns(10);
 
-        p1.add(l2); //성별
-        p1.add(rb1);
-        p1.add(rb2);
+        p4.add(tf1);
 
-        p2.add(l3); //학번
+        p4.add(l2); //성별
+        p4.add(c1);
+        p4.add(c2);
+
+        p5.setLayout(new FlowLayout(FlowLayout.LEFT, 10, 10));
+        p5.add(l3); //학번
         tf2.setColumns(8);
-        p2.add(tf2);
+        p5.add(tf2);
 
-        p2.add(l4); //전화번호
+        p5.add(l4); //전화번호
         tf3.setColumns(13);
-        p2.add(tf3);
+        p5.add(tf3);
 
-        p3.add(l5); //주소
+        p6.setLayout(new FlowLayout(FlowLayout.LEFT, 10, 10));
+        p6.add(l5); //주소
         tf4.setColumns(20);
-        p3.add(tf4);
+        p6.add(tf4);
 
-        p4.add(l6); //학과명
-        p4.add(ch1, BorderLayout.CENTER);
+        p7.setLayout(new FlowLayout(FlowLayout.LEFT, 10, 10));
+        p7.add(l6); //학과명
+        p7.add(ch1);
+        ch1.setSize(15,3);
 
-        p5.add(l7); //취미
-        p5.add(c3);
-        p5.add(c4);
-        p5.add(c5);
-        p5.add(c6);
+        p8.setLayout(new FlowLayout(FlowLayout.LEFT, 10, 10));
+        p8.add(l7, BorderLayout.WEST); //취미
+        p8.add(c3);
+        p8.add(c4);
+        p8.add(c5);
+        p8.add(c6);
 
-        p6.add(l8); //자기소개
-        p6.add(scrollPane);
+        p2.setLayout(new BorderLayout());
+        p2.add(l8, BorderLayout.NORTH); //자기소개
+
+        p2.add(scrollPane, BorderLayout.CENTER);
         scrollPane.setViewportView(ta1);
 
-        p7.add(b1, BorderLayout.CENTER);
-        p7.add(b2, BorderLayout.CENTER);
+        p3.add(b1, BorderLayout.CENTER);
+        p3.add(b2, BorderLayout.CENTER);
+
+        p2.add(p3, BorderLayout.PAGE_END);
 
         b1.addActionListener(bl);
         b2.addActionListener(bl);
@@ -140,7 +162,7 @@ public class RegStudent extends JFrame {
                 if(tf1.getText().isBlank()){
                     JOptionPane.showMessageDialog(null, "이름을 입력하세요");
                 }
-                else if(!rb1.isSelected() && !rb2.isSelected()){
+                else if(!c1.getState() && !c2.getState()){
                     JOptionPane.showMessageDialog(null, "성별을 선택해 주세요");
                 }
                 else if(tf2.getText().isBlank() || tf2.getText().length() != 8){
@@ -163,11 +185,11 @@ public class RegStudent extends JFrame {
                     id = tf2.getText();
                     name = tf1.getText();
 
-                    if(rb1.isSelected()){
-                        sex = rb1.getText();
+                    if(c1.getState()){
+                        sex = c1.getLabel();
                     }
                     else{
-                        sex = rb2.getText();
+                        sex = c2.getLabel();
                     }
 
                     p_num = tf3.getText();
@@ -240,8 +262,8 @@ public class RegStudent extends JFrame {
         c5.setState(false);
         c6.setState(false);
 
-        rb1.setSelected(false);
-        rb2.setSelected(false);
+        c1.setState(false);
+        c2.setState(false);
 
         ta1.setText("");
 
