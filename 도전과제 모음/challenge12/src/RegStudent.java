@@ -11,7 +11,7 @@ public class RegStudent extends JFrame {
     JButton b1, b2;
     JLabel l1, l2, l3, l4, l5, l6, l7, l8;
     JTextField tf1, tf2, tf3, tf4;
-    CheckboxGroup cg1, cg2;
+    CheckboxGroup cg1;
     Checkbox c1, c2, c3, c4, c5, c6;
     Choice ch1;
     JTextArea ta1;
@@ -23,15 +23,6 @@ public class RegStudent extends JFrame {
 
         GridBagConstraints g1 = new GridBagConstraints();
         ButtonListener bl = new ButtonListener();
-/*
-        p1 = new JPanel(new GridLayout(1,5,10,10));
-        p2 = new JPanel(new GridLayout(1,4,10,10));
-        p3 = new JPanel(new GridLayout(1,2,10,10));
-        p4 = new JPanel(new GridLayout(1,2,10,10));
-        p5 = new JPanel(new GridLayout(1,5,10,10));
-        p6 = new JPanel(new GridLayout(2,1,1,1));
-        p7 = new JPanel();
- */
 
         p1 = new JPanel();
         p2 = new JPanel();
@@ -42,8 +33,16 @@ public class RegStudent extends JFrame {
         p7 = new JPanel();
         p8 = new JPanel();
 
+        p1.setBackground(Color.YELLOW);
+        p2.setBackground(Color.YELLOW);
+        p3.setBackground(Color.YELLOW);
+        p4.setBackground(Color.YELLOW);
+        p5.setBackground(Color.YELLOW);
+        p6.setBackground(Color.YELLOW);
+        p7.setBackground(Color.YELLOW);
+        p8.setBackground(Color.YELLOW);
+
         cg1 = new CheckboxGroup();
-        cg2 = new CheckboxGroup();
 
         l1 = new JLabel("성명");
         l2 = new JLabel("성별");
@@ -78,16 +77,7 @@ public class RegStudent extends JFrame {
         ta1 = new JTextArea();
 
         JScrollPane scrollPane = new JScrollPane();
-/*
-        setLayout(new GridLayout(7,1));
-        add(p1);
-        add(p2, BorderLayout.AFTER_LAST_LINE);
-        add(p3, BorderLayout.AFTER_LAST_LINE);
-        add(p4, BorderLayout.AFTER_LAST_LINE);
-        add(p5, BorderLayout.AFTER_LAST_LINE);
-        add(p6, BorderLayout.AFTER_LAST_LINE);
-        add(p7, BorderLayout.AFTER_LAST_LINE);
-*/
+
         setLayout(new GridLayout(2,1));
         add(p1);
         add(p2);
@@ -101,7 +91,7 @@ public class RegStudent extends JFrame {
 
         p4.setLayout(new FlowLayout(FlowLayout.LEFT, 10, 10));
         p4.add(l1); //성명
-        tf1.setColumns(10);
+        tf1.setColumns(15);
 
         p4.add(tf1);
 
@@ -120,7 +110,7 @@ public class RegStudent extends JFrame {
 
         p6.setLayout(new FlowLayout(FlowLayout.LEFT, 10, 10));
         p6.add(l5); //주소
-        tf4.setColumns(20);
+        tf4.setColumns(27);
         p6.add(tf4);
 
         p7.setLayout(new FlowLayout(FlowLayout.LEFT, 10, 10));
@@ -199,16 +189,16 @@ public class RegStudent extends JFrame {
 
                     hobby = "";
                     if(c3.getState()){
-                        hobby += "운동";
+                        hobby += " 운동";
                     }
                     if(c4.getState()){
-                        hobby += "음악감상";
+                        hobby += " 음악감상";
                     }
                     if(c5.getState()){
-                        hobby += "영화";
+                        hobby += " 영화";
                     }
                     if(c6.getState()){
-                        hobby += "여행";
+                        hobby += " 여행";
                     }
 
                     intro = ta1.getText();
